@@ -22,7 +22,7 @@ struct Parser {
             }
             do {
                 let result = try JSONDecoder().decode(webMovie.self, from: data!)
-                print(result)
+           
                 comp(result.results)
             }
             catch{

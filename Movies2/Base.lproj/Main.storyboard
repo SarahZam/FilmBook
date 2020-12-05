@@ -18,13 +18,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b9-9b-hQF">
                                 <rect key="frame" x="140.5" y="694" width="133" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Pick For Me!"/>
+                                <state key="normal" title="Pick For Me!">
+                                    <color key="titleColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="spinButton:" destination="IXM-Yi-mUr" eventType="touchUpInside" id="dzW-Jz-YY9"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jJ9-hi-RH7">
                                 <rect key="frame" x="87" y="258" width="240" height="385"/>
+                                <color key="tintColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="74u-wr-4An">
                                 <rect key="frame" x="143" y="184" width="128" height="27.5"/>
@@ -32,19 +35,19 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tee-gs-UfL">
                                         <rect key="frame" x="0.0" y="0.0" width="61.5" height="27.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuX-xh-gbQ">
                                         <rect key="frame" x="113.5" y="0.0" width="14.5" height="27.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.64260193171027624" blue="0.23825358994388979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.9192116857" green="0.52891071850000004" blue="0.38859238359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="74u-wr-4An" firstAttribute="centerX" secondItem="gbV-Pt-Rpc" secondAttribute="centerX" id="4PH-bd-bKC"/>
                             <constraint firstItem="74u-wr-4An" firstAttribute="top" secondItem="gbV-Pt-Rpc" secondAttribute="top" constant="96" id="JpP-3C-87H"/>
@@ -60,7 +63,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Random Movie" id="alT-IP-deh">
                         <barButtonItem key="rightBarButtonItem" image="info.circle.fill" catalog="system" id="4vH-rT-kYt">
-                            <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="bOR-5T-WSo" kind="popoverPresentation" popoverAnchorBarButtonItem="4vH-rT-kYt" id="INf-07-Hg0">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -79,19 +82,19 @@
             </objects>
             <point key="canvasLocation" x="1813.0434782608697" y="18.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Favourites-->
         <scene sceneID="fZh-sK-PYL">
             <objects>
-                <viewController id="WrJ-w0-yAM" sceneMemberID="viewController">
+                <viewController id="WrJ-w0-yAM" customClass="UserDefaultVC" customModule="Movies2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p18-sH-QSS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.91921168565750122" green="0.52891071848744098" blue="0.38859238359130488" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="2SP-sE-TBD"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0tE-E5-c8L">
+                    <navigationItem key="navigationItem" title="Favourites" id="0tE-E5-c8L">
                         <barButtonItem key="rightBarButtonItem" image="info.circle.fill" catalog="system" id="4nL-TR-Mr3">
-                            <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="bOR-5T-WSo" kind="popoverPresentation" popoverAnchorBarButtonItem="4nL-TR-Mr3" id="RW2-vQ-2k8">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -107,14 +110,30 @@
             </objects>
             <point key="canvasLocation" x="1813.0434782608697" y="-630.13392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--SettingsVC-->
         <scene sceneID="jId-Hv-IqB">
             <objects>
-                <viewController id="egd-wY-JZP" sceneMemberID="viewController">
+                <viewController id="egd-wY-JZP" customClass="SettingsVC" customModule="Movies2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JzI-Jf-slr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.35547715323568302" green="0.13771397558038351" blue="0.76337489954711213" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igZ-fj-omg">
+                                <rect key="frame" x="188.5" y="727" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneBtn:" destination="egd-wY-JZP" eventType="touchUpInside" id="kuf-bc-EEt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="igZ-fj-omg" firstAttribute="top" secondItem="Fpn-gt-lRe" secondAttribute="top" constant="639" id="QvK-ls-2Re"/>
+                            <constraint firstItem="igZ-fj-omg" firstAttribute="centerX" secondItem="JzI-Jf-slr" secondAttribute="centerX" id="cCt-ZB-iag"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Fpn-gt-lRe"/>
                     </view>
                     <navigationItem key="navigationItem" id="2zA-8N-510"/>
@@ -124,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xed-aW-AXl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2914" y="-646"/>
+            <point key="canvasLocation" x="2913.04347826087" y="-646.20535714285711"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="T4U-bw-wxy">
@@ -133,7 +152,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="A5h-WI-x8G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.9192116857" green="0.52891071850000004" blue="0.38859238359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WebMoviesCell" rowHeight="84" id="Wep-Or-iVt" customClass="WebMoviesCell" customModule="Movies2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="84"/>
@@ -157,7 +176,7 @@
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="209" id="CYM-k8-php"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="0.2010751875" green="0.048652108630000003" blue="0.02599308166" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WTl-rs-dDL">
@@ -169,7 +188,7 @@
                                                                                 <constraint firstAttribute="width" secondItem="dTQ-yY-cFo" secondAttribute="height" multiplier="25:6" id="BJa-Er-MjT"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                                            <nil key="textColor"/>
+                                                                            <color key="textColor" red="0.2010751875" green="0.048652108630000003" blue="0.02599308166" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yz0-iK-RYO">
@@ -178,7 +197,7 @@
                                                                                 <constraint firstAttribute="width" secondItem="yz0-iK-RYO" secondAttribute="height" multiplier="13:6" id="zDl-Go-nJp"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                                            <nil key="textColor"/>
+                                                                            <color key="textColor" red="0.2010751875" green="0.048652108630000003" blue="0.02599308166" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -194,7 +213,7 @@
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="yyX-bm-Aii"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="0.2010751875" green="0.048652108630000003" blue="0.02599308166" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ku-ih-ydn">
@@ -203,7 +222,7 @@
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="L79-M3-HFy"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="0.2010751875" green="0.048652108630000003" blue="0.02599308166" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -216,7 +235,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="KFv-l8-EJc"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.2010751875" green="0.048652108630000003" blue="0.02599308166" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -266,6 +285,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="GAH-B8-XtA" kind="relationship" relationship="viewControllers" id="k48-7y-MTm"/>
@@ -277,15 +297,20 @@
             </objects>
             <point key="canvasLocation" x="-15.942028985507248" y="-305.35714285714283"/>
         </scene>
-        <!--My List-->
+        <!--Now Playing-->
         <scene sceneID="GnE-h9-4mX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9uj-F5-BaK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My List" image="list.bullet" catalog="system" id="0OQ-jV-hfh"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="play.fill" catalog="system" id="0OQ-jV-hfh">
+                        <color key="badgeColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aUU-9P-Esq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -296,10 +321,10 @@
             </objects>
             <point key="canvasLocation" x="-1717.3913043478262" y="-317.41071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--InfoVC-->
         <scene sceneID="hUC-i6-cUV">
             <objects>
-                <viewController id="bOR-5T-WSo" sceneMemberID="viewController">
+                <viewController id="bOR-5T-WSo" customClass="InfoVC" customModule="Movies2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GeY-dx-7Gm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -315,11 +340,16 @@
         <scene sceneID="HmD-T6-rwo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GAH-B8-XtA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favourites" image="star.fill" catalog="system" id="hVb-N2-xoH"/>
+                    <tabBarItem key="tabBarItem" title="Favourites" image="star.fill" catalog="system" id="hVb-N2-xoH">
+                        <color key="badgeColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qSz-JC-kf3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -334,11 +364,16 @@
         <scene sceneID="vex-XJ-BYT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hFO-tl-js6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Random" image="play.fill" catalog="system" id="vVB-b7-pQC"/>
+                    <tabBarItem key="tabBarItem" title="Random" image="questionmark.video.fill" catalog="system" id="vVB-b7-pQC">
+                        <color key="badgeColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5xG-k2-L6q">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -356,9 +391,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>
+        <image name="questionmark.video.fill" catalog="system" width="128" height="82"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
 </document>

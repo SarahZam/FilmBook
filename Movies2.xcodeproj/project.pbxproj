@@ -18,6 +18,9 @@
 		2D4B4FD3257B00EC007BC55E /* WebMoviesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B4FD2257B00EC007BC55E /* WebMoviesCell.swift */; };
 		2D4B4FD5257B0247007BC55E /* webMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B4FD4257B0247007BC55E /* webMovie.swift */; };
 		2D4B4FD7257B0267007BC55E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B4FD6257B0267007BC55E /* Parser.swift */; };
+		2D4B4FDB257B0401007BC55E /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B4FDA257B0401007BC55E /* SettingsVC.swift */; };
+		2D4B4FDD257B0419007BC55E /* UserDefaultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B4FDC257B0419007BC55E /* UserDefaultVC.swift */; };
+		2D4B4FDF257B0E9C007BC55E /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B4FDE257B0E9C007BC55E /* InfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		2D4B4FD2257B00EC007BC55E /* WebMoviesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMoviesCell.swift; sourceTree = "<group>"; };
 		2D4B4FD4257B0247007BC55E /* webMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webMovie.swift; sourceTree = "<group>"; };
 		2D4B4FD6257B0267007BC55E /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		2D4B4FDA257B0401007BC55E /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		2D4B4FDC257B0419007BC55E /* UserDefaultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultVC.swift; sourceTree = "<group>"; };
+		2D4B4FDE257B0E9C007BC55E /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 				2D4B4FCE257AFF7E007BC55E /* RandomVC.swift */,
 				2D4B4FD0257B00D3007BC55E /* WebMoviesTVC.swift */,
 				2D4B4FD2257B00EC007BC55E /* WebMoviesCell.swift */,
+				2D4B4FDA257B0401007BC55E /* SettingsVC.swift */,
+				2D4B4FDC257B0419007BC55E /* UserDefaultVC.swift */,
+				2D4B4FDE257B0E9C007BC55E /* InfoVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,11 +181,14 @@
 				2D4B4FD1257B00D3007BC55E /* WebMoviesTVC.swift in Sources */,
 				2D4B4FD5257B0247007BC55E /* webMovie.swift in Sources */,
 				2D4B4FC0257AF5C0007BC55E /* Movies2.xcdatamodeld in Sources */,
+				2D4B4FDD257B0419007BC55E /* UserDefaultVC.swift in Sources */,
+				2D4B4FDF257B0E9C007BC55E /* InfoVC.swift in Sources */,
 				2D4B4FB6257AF5C0007BC55E /* AppDelegate.swift in Sources */,
 				2D4B4FD7257B0267007BC55E /* Parser.swift in Sources */,
 				2D4B4FB8257AF5C0007BC55E /* SceneDelegate.swift in Sources */,
 				2D4B4FCF257AFF7E007BC55E /* RandomVC.swift in Sources */,
 				2D4B4FD3257B00EC007BC55E /* WebMoviesCell.swift in Sources */,
+				2D4B4FDB257B0401007BC55E /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
