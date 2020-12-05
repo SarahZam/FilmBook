@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let mydefaults = ["Name":"N/A", "FavouriteMovie":"N/A", "Genre":"N/A"]
+        UserDefaults.standard.register(defaults: mydefaults)
         return true
     }
 

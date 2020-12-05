@@ -8,10 +8,21 @@
 
 import UIKit
 
-class SettingsVC: UIViewController {
-
+class SettingsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    
+    @IBOutlet weak var favMovieField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var picker: UIPickerView!
+    
+    let genres = ["Action", "Horror", "Comedy", "Drama", "Romance"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //for picker
+        picker.dataSource = self
+        picker.delegate = self
 
         // Do any additional setup after loading the view.
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
@@ -19,6 +30,59 @@ class SettingsVC: UIViewController {
         leftSwipe.direction = UISwipeGestureRecognizer.Direction.right
         
         self.view.addGestureRecognizer(leftSwipe)
+       // retrieveData()
+    }
+    
+    func retrieveData(){
+        let mydefaults: UserDefaults = UserDefaults.standard
+        
+        let strnamefound = mydefaults.string(forKey: "Name") ?? ""
+        
+        let strfavmovfound = mydefaults.string(forKey: "FavouriteMovie") ?? ""
+        
+        let strgenrefound = mydefaults.string(forKey: "Genre") ?? ""
+        
+        
+        if(strnamefound != "")
+        {
+            print(strnamefound)
+        }
+        else{
+            print("N/A")
+        }
+        
+        if(strfavmovfound != "")
+        {
+            print(strfavmovfound)
+        }
+        else{
+            print("N/A")
+        }
+        
+        if(strgenrefound != "")
+        {
+            print(strgenrefound)
+        }
+        else{
+            print("N/A")
+        }
+        
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+         return 1
+     }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return genres[row]
+    }
+    
+     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return genres.count
+     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        UserDefaults.standard.set(genres[row], forKey: "Genre")
     }
     
     @objc func swipeAction(swipe: UISwipeGestureRecognizer){
@@ -33,20 +97,14 @@ class SettingsVC: UIViewController {
                 break
             }
         }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-   
+    
+    
     @IBAction func doneBtn(_ sender: Any) {
         
+        UserDefaults.standard.set(nameField.text, forKey: "Name")
+        UserDefaults.standard.set(favMovieField.text, forKey: "FavouriteMovie")
+        
+       // retrieveData()
        showActionSheet()
         
     }

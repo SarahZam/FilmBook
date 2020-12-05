@@ -10,6 +10,9 @@ import UIKit
 
 class UserDefaultVC: UIViewController {
 
+    @IBOutlet weak var nameField: UILabel!
+    @IBOutlet weak var favmovField: UILabel!
+    @IBOutlet weak var genreField: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,10 +21,90 @@ class UserDefaultVC: UIViewController {
                
                leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
                self.view.addGestureRecognizer(leftSwipe)
-           
+        
+        
+        let mydefaults: UserDefaults = UserDefaults.standard
+              
+              let strnamefound = mydefaults.string(forKey: "Name") ?? ""
+              
+              let strfavmovfound = mydefaults.string(forKey: "FavouriteMovie") ?? ""
+              
+              let strgenrefound = mydefaults.string(forKey: "Genre") ?? ""
+              
+              
+              if(strnamefound != "")
+              {
+                nameField.text = strnamefound
+              }
+              else{
+                  print("N/A")
+              }
+              
+              if(strfavmovfound != "")
+              {
+                favmovField.text = strfavmovfound
+              }
+              else{
+                  print("N/A")
+              }
+              
+              if(strgenrefound != "")
+              {
+                genreField.text = strgenrefound
+              }
+              else{
+                  print("N/A")
+              }
+              
+    
+        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil)
+        { notification in
+            
+            if mydefaults.string(forKey: "Genre") == "Comedy" {
+                self.showActionSheet(title: "For your Genre", message: "Check out Fatman!")
+            }
+            
+        }
+        
+        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil)
+        { notification in
+            
+            if mydefaults.string(forKey: "Genre") == "Action" {
+                self.showActionSheet(title: "For your Genre", message: "Check out Tenet!")
+            }
+            
+        }
+        
+        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil)
+        { notification in
+            
+            if mydefaults.string(forKey: "Genre") == "Drama" {
+                self.showActionSheet(title: "For your Genre", message: "Check out Bronx!")
+            }
+            
+        }
+        
+        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil)
+               { notification in
+                   
+                   if mydefaults.string(forKey: "Genre") == "Romance" {
+                       self.showActionSheet(title: "For your Genre", message: "Check out Enola Holmes!")
+                   }
+                   
+               }
+        
+        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil)
+               { notification in
+                   
+                   if mydefaults.string(forKey: "Genre") == "Horror" {
+                       self.showActionSheet(title: "For your Genre", message: "Check out Haunting of Hill House!")
+                   }
+                   
+               }
+        
     }
     override func viewDidAppear(_ animated: Bool) {
-        createAlert(title: "Settings", message: "Please swipe left to access Settings")
+       
     }
     
     //ALERT 1
@@ -34,6 +117,16 @@ class UserDefaultVC: UIViewController {
         }))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showActionSheet( title: String, message: String){
+        let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+                 
+         actionSheet.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { action in
+                     print("tapped miss")
+                 }))
+                 
+         present(actionSheet, animated: true, completion: nil)
     }
     
    
@@ -50,16 +143,10 @@ class UserDefaultVC: UIViewController {
           default:
               break
           }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
-
-}
+    
+    @IBAction func acessSettingsBtn(_ sender: Any) {
+         createAlert(title: "Settings", message: "Please swipe left to access Settings")
+    }
 }

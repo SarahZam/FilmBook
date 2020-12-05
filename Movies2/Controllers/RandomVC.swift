@@ -26,7 +26,11 @@ class RandomVC: UIViewController {
              UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, animations: {
                  self.button.center = CGPoint(x: 100+200, y: 40)
              }, completion: nil)
+        
+        
+        
     }
+   
     
 
     /*
