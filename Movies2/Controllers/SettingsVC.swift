@@ -32,42 +32,7 @@ class SettingsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         self.view.addGestureRecognizer(leftSwipe)
        // retrieveData()
     }
-    
-    func retrieveData(){
-        let mydefaults: UserDefaults = UserDefaults.standard
-        
-        let strnamefound = mydefaults.string(forKey: "Name") ?? ""
-        
-        let strfavmovfound = mydefaults.string(forKey: "FavouriteMovie") ?? ""
-        
-        let strgenrefound = mydefaults.string(forKey: "Genre") ?? ""
-        
-        
-        if(strnamefound != "")
-        {
-            print(strnamefound)
-        }
-        else{
-            print("N/A")
-        }
-        
-        if(strfavmovfound != "")
-        {
-            print(strfavmovfound)
-        }
-        else{
-            print("N/A")
-        }
-        
-        if(strgenrefound != "")
-        {
-            print(strgenrefound)
-        }
-        else{
-            print("N/A")
-        }
-        
-    }
+
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
          return 1
@@ -104,12 +69,12 @@ class SettingsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         UserDefaults.standard.set(nameField.text, forKey: "Name")
         UserDefaults.standard.set(favMovieField.text, forKey: "FavouriteMovie")
         
-       // retrieveData()
+       
        showActionSheet()
         
     }
     func showAlert(){
-           let alert = UIAlertController(title: "Changes", message: "Your changes are updated.", preferredStyle: .alert)
+           let alert = UIAlertController(title: "Changes", message: "Your changes are updated. Swipe right to go back to User Profile.", preferredStyle: .alert)
            
            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { action in
                print("tapped miss")
@@ -119,7 +84,7 @@ class SettingsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
        }
        
        func showActionSheet(){
-           let actionSheet = UIAlertController(title: "Changes", message: "Your changes are updated", preferredStyle: .actionSheet)
+           let actionSheet = UIAlertController(title: "Changes", message: "Your changes are updated. Swipe right to go back to User Profile.", preferredStyle: .actionSheet)
                     
             actionSheet.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { action in
                         print("tapped miss")

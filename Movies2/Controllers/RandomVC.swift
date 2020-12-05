@@ -30,9 +30,6 @@ class RandomVC: UIViewController {
         
         
     }
-   
-    
-
     /*
     // MARK: - Navigation
 
@@ -43,6 +40,7 @@ class RandomVC: UIViewController {
     }
     */
     @IBAction func spinButton(_ sender: Any) {
+        
           spinAndAssignImage()
     }
     

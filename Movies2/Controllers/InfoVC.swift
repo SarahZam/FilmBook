@@ -10,10 +10,20 @@ import UIKit
 
 class InfoVC: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var buildLabel: UILabel!
+    @IBOutlet weak var copyrightLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        nameLabel?.text = Bundle.main.displayName
+        versionLabel?.text = Bundle.main.version
+        buildLabel?.text = Bundle.main.build
+        copyrightLabel?.text = Bundle.main.copyright
     }
     
 

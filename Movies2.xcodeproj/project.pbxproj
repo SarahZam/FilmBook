@@ -21,10 +21,11 @@
 		2D4B4FDB257B0401007BC55E /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B4FDA257B0401007BC55E /* SettingsVC.swift */; };
 		2D4B4FDD257B0419007BC55E /* UserDefaultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B4FDC257B0419007BC55E /* UserDefaultVC.swift */; };
 		2D4B4FDF257B0E9C007BC55E /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B4FDE257B0E9C007BC55E /* InfoVC.swift */; };
+		2D4B4FE2257B5E74007BC55E /* Bundle+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B4FE1257B5E74007BC55E /* Bundle+Info.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D4B4FB2257AF5C0007BC55E /* Movies2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D4B4FB2257AF5C0007BC55E /* FilmBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D4B4FB5257AF5C0007BC55E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D4B4FB7257AF5C0007BC55E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2D4B4FBC257AF5C0007BC55E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		2D4B4FDA257B0401007BC55E /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		2D4B4FDC257B0419007BC55E /* UserDefaultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultVC.swift; sourceTree = "<group>"; };
 		2D4B4FDE257B0E9C007BC55E /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		2D4B4FE1257B5E74007BC55E /* Bundle+Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Info.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,7 @@
 		2D4B4FB3257AF5C0007BC55E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D4B4FB2257AF5C0007BC55E /* Movies2.app */,
+				2D4B4FB2257AF5C0007BC55E /* FilmBook.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +74,7 @@
 		2D4B4FB4257AF5C0007BC55E /* Movies2 */ = {
 			isa = PBXGroup;
 			children = (
+				2D4B4FE0257B5E5F007BC55E /* Extensions */,
 				2D4B4FCD257AFBE5007BC55E /* Controllers */,
 				2D4B4FCC257AFBD8007BC55E /* Model */,
 				2D4B4FB5257AF5C0007BC55E /* AppDelegate.swift */,
@@ -107,6 +110,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		2D4B4FE0257B5E5F007BC55E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D4B4FE1257B5E74007BC55E /* Bundle+Info.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,7 +135,7 @@
 			);
 			name = Movies2;
 			productName = Movies2;
-			productReference = 2D4B4FB2257AF5C0007BC55E /* Movies2.app */;
+			productReference = 2D4B4FB2257AF5C0007BC55E /* FilmBook.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -187,6 +198,7 @@
 				2D4B4FD7257B0267007BC55E /* Parser.swift in Sources */,
 				2D4B4FB8257AF5C0007BC55E /* SceneDelegate.swift in Sources */,
 				2D4B4FCF257AFF7E007BC55E /* RandomVC.swift in Sources */,
+				2D4B4FE2257B5E74007BC55E /* Bundle+Info.swift in Sources */,
 				2D4B4FD3257B00EC007BC55E /* WebMoviesCell.swift in Sources */,
 				2D4B4FDB257B0401007BC55E /* SettingsVC.swift in Sources */,
 			);
@@ -339,7 +351,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.szaman.Movies2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FilmBook;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -356,7 +368,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.szaman.Movies2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FilmBook;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
