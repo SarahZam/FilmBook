@@ -13,10 +13,15 @@ class WebMoviesCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var language: UILabel!
     @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
+    @IBOutlet weak var dateReleased: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        //Localization
+        languageLabel.text = NSLocalizedString("Language:", comment: "")
+        dateReleased.text = NSLocalizedString("Date released:", comment: "")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

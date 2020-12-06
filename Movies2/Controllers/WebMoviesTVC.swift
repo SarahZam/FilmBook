@@ -14,9 +14,11 @@ class WebMoviesTVC: UITableViewController {
 
     var results = [Result]()
 
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = NSLocalizedString("Now Playing", comment: "")
         parser.parse{
             data in
             self.results = data

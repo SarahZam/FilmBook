@@ -9,6 +9,10 @@
 import UIKit
 
 class SettingsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var favmov: UILabel!
+    @IBOutlet weak var genre: UILabel!
+    @IBOutlet weak var donebtn: UIButton!
     
     
     @IBOutlet weak var favMovieField: UITextField!
@@ -19,6 +23,12 @@ class SettingsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //localization
+        name.text = NSLocalizedString("Name", comment: "")
+        favmov.text = NSLocalizedString("Favourite Movie", comment: "")
+        genre.text = NSLocalizedString("Favourite Genre", comment: "")
+        donebtn.setTitle(NSLocalizedString("Done", comment: ""), for: .normal)
         
         //for picker
         picker.dataSource = self
@@ -74,20 +84,20 @@ class SettingsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         
     }
     func showAlert(){
-           let alert = UIAlertController(title: "Changes", message: "Your changes are updated. Swipe right to go back to User Profile.", preferredStyle: .alert)
+           let alert = UIAlertController(title: NSLocalizedString("Changes", comment: ""), message: NSLocalizedString("Your changes are updated. Swipe right to go back to User Profile.", comment: ""), preferredStyle: .alert)
            
-           alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { action in
-               print("tapped miss")
+           alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: { action in
+             
            }))
            
            present(alert, animated: true, completion: nil)
        }
        
        func showActionSheet(){
-           let actionSheet = UIAlertController(title: "Changes", message: "Your changes are updated. Swipe right to go back to User Profile.", preferredStyle: .actionSheet)
+           let actionSheet = UIAlertController(title: NSLocalizedString("Changes", comment: ""), message: NSLocalizedString("Your changes are updated. Swipe right to go back to User Profile.", comment: ""), preferredStyle: .actionSheet)
                     
-            actionSheet.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { action in
-                        print("tapped miss")
+            actionSheet.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: { action in
+                       
                     }))
                     
             present(actionSheet, animated: true, completion: nil)

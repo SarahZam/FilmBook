@@ -9,7 +9,12 @@
 import UIKit
 
 class InfoVC: UIViewController {
-
+    @IBOutlet weak var appinfo: UILabel!
+    @IBOutlet weak var appname: UILabel!
+    @IBOutlet weak var appversion: UILabel!
+    @IBOutlet weak var build: UILabel!
+    @IBOutlet weak var swipedown: UILabel!
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var buildLabel: UILabel!
@@ -18,7 +23,12 @@ class InfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       //Localization
+        appinfo.text = NSLocalizedString("App Information", comment: "")
+        appname.text = NSLocalizedString("App Name", comment: "")
+        appversion.text = NSLocalizedString("App Version", comment: "")
+        build.text = NSLocalizedString("Build", comment: "")
+        swipedown.text = NSLocalizedString("Swipe Down to Exit", comment: "")
         
         nameLabel?.text = Bundle.main.displayName
         versionLabel?.text = Bundle.main.version

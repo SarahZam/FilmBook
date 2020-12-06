@@ -10,6 +10,7 @@ import UIKit
 
 class RandomVC: UIViewController {
 
+    @IBOutlet weak var ratingLabel2: UILabel!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var ratingStack: UIStackView!
     @IBOutlet weak var ratingLabel: UILabel!
@@ -17,6 +18,7 @@ class RandomVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+     
         // Do any additional setup after loading the view.
         //ADDING ANIMATIONS
              UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, animations: {
@@ -28,6 +30,10 @@ class RandomVC: UIViewController {
              }, completion: nil)
         
         
+        //Localization
+        self.title = NSLocalizedString("Random Movie", comment: "")
+        button.setTitle(NSLocalizedString("Pick For Me!", comment: ""), for: .normal)
+        ratingLabel2.text = NSLocalizedString("Rating", comment: "")
         
     }
     /*
@@ -105,3 +111,4 @@ class RandomVC: UIViewController {
            }
        }
 }
+

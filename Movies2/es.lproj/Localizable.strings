@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  Movies2
+
+  Created by Sarah Zaman on 12/7/20.
+  Copyright © 2020 Sarah Zaman. All rights reserved.
+*/
+"Pick For Me!" = "¡Elige para mí!";
+"Rating" = "Clasificación";
+"Random Movie" = "Película aleatoria";
+"Now Playing" = "Jugando ahora";
+"User" = "Usuaria";
+"Name" = "Nombre";
+"Favourite Movie" = "Película favorita";
+"Favourite Genre" = "Género favorita";
+"How to Access Settings" = "Cómo acceder a la configuración";
+"Done" = "Hecho";
+"App Information" = "Información de la app";
+"App Name" = "Nombre de la app";
+"App Version" = "Version de app";
+"Build" = "Construir";
+"Swipe Down to Exit" = "Desliza hacia abajo para salir";
+"Language:" = "idioma";
+"Date released:" = "Fecha de publicación";
+"For Your Genre" = "Para tu genero";
+"Check out Haunting of HillHouse!" = "revisa Haunting of Hill House";
+"Check out The NoteBook!" = "revisa The Note Book";
+"Check out Bronx!" = "revisa Bronx";
+"Check out Tenet!"="revisa Tenet";
+"Check out Fatman!" = "revisa Fatman";
+"Settings" = "ajustes";
+
+"Please swipe left to access settings" = "Desliza el dedo hacia la izquierda para acceder a la configuración";
+"Changes" = "cambios";
+"Your changes are updated. Swipe right to go back to User Profile." = "Se actualizan sus cambios. Deslice el dedo hacia la derecha para volver al perfil de usuario.";

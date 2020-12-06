@@ -10,7 +10,7 @@
         <!--Random Movie-->
         <scene sceneID="zXD-Du-BNZ">
             <objects>
-                <viewController id="IXM-Yi-mUr" customClass="RandomVC" customModule="Movies2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IXM-Yi-mUr" customClass="RandomVC" customModule="FilmBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jiK-Mv-nmb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,6 +75,7 @@
                         <outlet property="button" destination="5b9-9b-hQF" id="Gcn-2Z-Kn2"/>
                         <outlet property="movieImage" destination="jJ9-hi-RH7" id="qgs-6m-AIQ"/>
                         <outlet property="ratingLabel" destination="uuX-xh-gbQ" id="Hxx-MZ-LaP"/>
+                        <outlet property="ratingLabel2" destination="Tee-gs-UfL" id="wcD-5N-9MS"/>
                         <outlet property="ratingStack" destination="74u-wr-4An" id="eqn-PL-dkH"/>
                     </connections>
                 </viewController>
@@ -85,7 +86,7 @@
         <!--User-->
         <scene sceneID="fZh-sK-PYL">
             <objects>
-                <viewController id="WrJ-w0-yAM" customClass="UserDefaultVC" customModule="Movies2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WrJ-w0-yAM" customClass="UserDefaultVC" customModule="FilmBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p18-sH-QSS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,8 +207,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="accessBtn" destination="lmk-Ny-QBg" id="OVO-aP-3Q4"/>
+                        <outlet property="favmov" destination="rhw-tR-Ub4" id="Od0-ds-Joi"/>
                         <outlet property="favmovField" destination="bpn-CS-mUi" id="5yF-3a-s0k"/>
+                        <outlet property="genre" destination="Izh-UB-UrG" id="EHf-Y5-e3k"/>
                         <outlet property="genreField" destination="NkS-4l-3Fq" id="nBG-Fm-Xr7"/>
+                        <outlet property="name" destination="3MM-eC-Idm" id="I7k-fn-pfP"/>
                         <outlet property="nameField" destination="CVL-Af-dfF" id="WDW-D1-JRh"/>
                         <segue destination="egd-wY-JZP" kind="show" identifier="swipeLeft" id="9D2-iN-YMI"/>
                     </connections>
@@ -219,7 +224,7 @@
         <!--SettingsVC-->
         <scene sceneID="jId-Hv-IqB">
             <objects>
-                <viewController id="egd-wY-JZP" customClass="SettingsVC" customModule="Movies2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="egd-wY-JZP" customClass="SettingsVC" customModule="FilmBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JzI-Jf-slr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -311,7 +316,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="2zA-8N-510"/>
                     <connections>
+                        <outlet property="donebtn" destination="igZ-fj-omg" id="e9U-QJ-baN"/>
                         <outlet property="favMovieField" destination="dwT-Pm-B4Y" id="YHi-OL-QTF"/>
+                        <outlet property="favmov" destination="m7P-GJ-PWn" id="wQ6-un-jmF"/>
+                        <outlet property="genre" destination="dQt-YB-9c7" id="0Af-oh-y9e"/>
+                        <outlet property="name" destination="78T-Ee-pP2" id="GZc-Zi-hln"/>
                         <outlet property="nameField" destination="uaE-eK-iYY" id="3m3-Xg-a11"/>
                         <outlet property="picker" destination="PWi-1q-nRD" id="fcE-vZ-CEn"/>
                         <segue destination="WrJ-w0-yAM" kind="show" identifier="swipeRight" id="oIt-Ng-Tr2"/>
@@ -324,13 +333,13 @@
         <!--Now Playing-->
         <scene sceneID="T4U-bw-wxy">
             <objects>
-                <tableViewController id="vjF-S2-04V" customClass="WebMoviesTVC" customModule="Movies2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="vjF-S2-04V" customClass="WebMoviesTVC" customModule="FilmBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="A5h-WI-x8G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.9192116857" green="0.52891071850000004" blue="0.38859238359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WebMoviesCell" rowHeight="84" id="Wep-Or-iVt" customClass="WebMoviesCell" customModule="Movies2" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WebMoviesCell" rowHeight="84" id="Wep-Or-iVt" customClass="WebMoviesCell" customModule="FilmBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="84"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wep-Or-iVt" id="4I4-4n-64h">
@@ -427,7 +436,9 @@
                                 <color key="backgroundColor" red="1" green="0.94726583088532901" blue="0.70603113883518587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="date" destination="0ku-ih-ydn" id="BF8-Wy-RkP"/>
+                                    <outlet property="dateReleased" destination="az0-hS-qbg" id="SrS-FG-ZBn"/>
                                     <outlet property="language" destination="yz0-iK-RYO" id="R0O-1l-W7d"/>
+                                    <outlet property="languageLabel" destination="dTQ-yY-cFo" id="11p-3Y-CxM"/>
                                     <outlet property="synopsis" destination="khS-2X-9kA" id="yBj-Ky-86b"/>
                                     <outlet property="title" destination="auS-6f-m1h" id="aU1-SI-lvE"/>
                                 </connections>
@@ -473,11 +484,11 @@
             </objects>
             <point key="canvasLocation" x="-15.942028985507248" y="-305.35714285714283"/>
         </scene>
-        <!--Now Playing-->
+        <!--Navigation Controller-->
         <scene sceneID="GnE-h9-4mX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9uj-F5-BaK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Now Playing" image="play.fill" catalog="system" id="0OQ-jV-hfh">
+                    <tabBarItem key="tabBarItem" title="" image="play.fill" catalog="system" id="0OQ-jV-hfh">
                         <color key="badgeColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -500,7 +511,7 @@
         <!--InfoVC-->
         <scene sceneID="hUC-i6-cUV">
             <objects>
-                <viewController id="bOR-5T-WSo" customClass="InfoVC" customModule="Movies2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bOR-5T-WSo" customClass="InfoVC" customModule="FilmBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GeY-dx-7Gm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -625,9 +636,14 @@
                         <viewLayoutGuide key="safeArea" id="3td-Ak-bf8"/>
                     </view>
                     <connections>
+                        <outlet property="appinfo" destination="hXO-md-WZD" id="5O7-k7-ciw"/>
+                        <outlet property="appname" destination="wZc-3R-C04" id="G8x-ML-a1H"/>
+                        <outlet property="appversion" destination="1Z1-n0-p4r" id="eQz-Mw-PfA"/>
+                        <outlet property="build" destination="UoY-fM-FqT" id="Lso-qM-aQN"/>
                         <outlet property="buildLabel" destination="kTv-L4-4a0" id="Nwc-Dl-bFc"/>
                         <outlet property="copyrightLabel" destination="tv9-OZ-DbT" id="cnM-wr-1ac"/>
                         <outlet property="nameLabel" destination="mTe-M4-mhR" id="UMc-qK-x93"/>
+                        <outlet property="swipedown" destination="OQV-2C-igo" id="kJi-yX-sYO"/>
                         <outlet property="versionLabel" destination="wGI-RV-Yad" id="G0Q-Eg-64m"/>
                     </connections>
                 </viewController>
@@ -635,11 +651,11 @@
             </objects>
             <point key="canvasLocation" x="14.492753623188406" y="-1122.3214285714284"/>
         </scene>
-        <!--User-->
+        <!--Navigation Controller-->
         <scene sceneID="HmD-T6-rwo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GAH-B8-XtA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="hVb-N2-xoH">
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="hVb-N2-xoH">
                         <color key="badgeColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -659,11 +675,11 @@
             </objects>
             <point key="canvasLocation" x="902.89855072463774" y="-630.13392857142856"/>
         </scene>
-        <!--Random-->
+        <!--Navigation Controller-->
         <scene sceneID="vex-XJ-BYT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hFO-tl-js6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Random" image="questionmark.video.fill" catalog="system" id="vVB-b7-pQC">
+                    <tabBarItem key="tabBarItem" title="" image="questionmark.video.fill" catalog="system" id="vVB-b7-pQC">
                         <color key="badgeColor" red="0.42918432449999999" green="0.1038453458" blue="0.055480854369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -685,7 +701,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RW2-vQ-2k8"/>
+        <segue reference="ah7-YS-3ap"/>
         <segue reference="oIt-Ng-Tr2"/>
     </inferredMetricsTieBreakers>
     <resources>

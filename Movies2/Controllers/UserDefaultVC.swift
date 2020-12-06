@@ -9,12 +9,25 @@
 import UIKit
 
 class UserDefaultVC: UIViewController {
-
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var favmov: UILabel!
+    @IBOutlet weak var genre: UILabel!
+    @IBOutlet weak var accessBtn: UIButton!
+    
     @IBOutlet weak var nameField: UILabel!
     @IBOutlet weak var favmovField: UILabel!
     @IBOutlet weak var genreField: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Localization
+        self.title = NSLocalizedString("User", comment: "")
+        
+        accessBtn.setTitle(NSLocalizedString("How to Access Settings", comment: ""), for: .normal)
+        
+        name.text = NSLocalizedString("Name", comment: "")
+        favmov.text = NSLocalizedString("Favourite Movie", comment: "")
+        genre.text = NSLocalizedString("Favourite Genre", comment: "")
 
         // Do any additional setup after loading the view.
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
@@ -37,7 +50,7 @@ class UserDefaultVC: UIViewController {
                 nameField.text = strnamefound
               }
               else{
-                  print("N/A")
+                  nameField.text="N/A"
               }
               
               if(strfavmovfound != "")
@@ -45,7 +58,7 @@ class UserDefaultVC: UIViewController {
                 favmovField.text = strfavmovfound
               }
               else{
-                  print("N/A")
+                  favmovField.text = "N/A"
               }
               
               if(strgenrefound != "")
@@ -53,7 +66,7 @@ class UserDefaultVC: UIViewController {
                 genreField.text = strgenrefound
               }
               else{
-                  print("N/A")
+                  genreField.text = "N/A"
               }
               
     
@@ -61,7 +74,7 @@ class UserDefaultVC: UIViewController {
         { notification in
             
             if mydefaults.string(forKey: "Genre") == "Comedy" {
-                self.showActionSheet(title: "For your Genre", message: "Check out Fatman!")
+                self.showActionSheet(title: NSLocalizedString("For Your Genre", comment: ""), message:  NSLocalizedString("Check out Fatman!", comment: ""))
             }
             
         }
@@ -70,7 +83,7 @@ class UserDefaultVC: UIViewController {
         { notification in
             
             if mydefaults.string(forKey: "Genre") == "Action" {
-                self.showActionSheet(title: "For your Genre", message: "Check out Tenet!")
+                self.showActionSheet(title: NSLocalizedString("For Your Genre", comment: ""), message: NSLocalizedString("Check out Tenet!", comment: ""))
             }
             
         }
@@ -79,7 +92,7 @@ class UserDefaultVC: UIViewController {
         { notification in
             
             if mydefaults.string(forKey: "Genre") == "Drama" {
-                self.showActionSheet(title: "For your Genre", message: "Check out Bronx!")
+                self.showActionSheet(title: NSLocalizedString("For Your Genre", comment: ""), message: NSLocalizedString("Check out Bronx!", comment: ""))
             }
             
         }
@@ -88,7 +101,7 @@ class UserDefaultVC: UIViewController {
                { notification in
                    
                    if mydefaults.string(forKey: "Genre") == "Romance" {
-                       self.showActionSheet(title: "For your Genre", message: "Check out Enola Holmes!")
+                       self.showActionSheet(title: NSLocalizedString("For Your Genre", comment: ""), message: NSLocalizedString("Check out The NoteBook!", comment: ""))
                    }
                    
                }
@@ -97,7 +110,7 @@ class UserDefaultVC: UIViewController {
                { notification in
                    
                    if mydefaults.string(forKey: "Genre") == "Horror" {
-                       self.showActionSheet(title: "For your Genre", message: "Check out Haunting of Hill House!")
+                       self.showActionSheet(title: NSLocalizedString("For Your Genre", comment: ""), message: NSLocalizedString("Check out Haunting of HillHouse!", comment: ""))
                    }
                    
                }
@@ -111,10 +124,11 @@ class UserDefaultVC: UIViewController {
     func createAlert (title:String, message:String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
+       alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: {
             (action) in
             alert.dismiss(animated: true, completion: nil)
         }))
+        
         
         self.present(alert, animated: true, completion: nil)
     }
@@ -122,8 +136,8 @@ class UserDefaultVC: UIViewController {
     func showActionSheet( title: String, message: String){
         let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
                  
-         actionSheet.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { action in
-                     print("tapped miss")
+         actionSheet.addAction(UIAlertAction(title: NSLocalizedString("Okay", comment: ""), style: .cancel, handler: { action in
+                     
                  }))
                  
          present(actionSheet, animated: true, completion: nil)
@@ -147,6 +161,7 @@ class UserDefaultVC: UIViewController {
     }
     
     @IBAction func acessSettingsBtn(_ sender: Any) {
-         createAlert(title: "Settings", message: "Please swipe left to access Settings")
+         createAlert(title: NSLocalizedString("Settings", comment: ""), message: NSLocalizedString("Please swipe left to access settings", comment: ""))
+        
     }
 }
