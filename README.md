@@ -1,0 +1,2 @@
+# FilmBook
+This is an app for movie enthusiasts. It uses the api from moviedb.org to show the current movies being played in theatres. The user has the option to make a personal profile with their user name, favourite movie, and favourite genre (as a picker) and all these information is save with user default. The app also has a i icon to show the app information. The app has a view controller that lets the user have a movie selected for them randomly that they can watch.
